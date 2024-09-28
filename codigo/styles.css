@@ -1,0 +1,224 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Cambiar la fuente a Times New Roman */
+    color: black; /* Texto en negro */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    animation: gradientAnimation 10s ease infinite; /* Añadir animación al fondo */
+    background: linear-gradient(135deg, #45b39d, #B6E1E7);
+    background-size: 300% 300%; /* Tamaño del fondo para animación */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Posición inicial del fondo */
+    }
+    50% {
+        background-position: 100% 50%; /* Posición del medio */
+    }
+    100% {
+        background-position: 0% 50%; /* Regresar a la posición inicial */
+    }
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el header */
+    border-radius: 0 0 20px 20px;
+    animation: slideIn 0.8s ease-out forwards; /* Animación de entrada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: black; /* Color del texto en negro */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación para el título */
+    opacity: 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #333; /* Color más oscuro para el subtítulo */
+    margin-top: 10px;
+    animation: fadeIn 1.2s ease-in-out forwards; /* Animación para el subtítulo */
+    opacity: 0;
+    animation-delay: 0.2s; /* Retraso para que aparezca después del título */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú */
+    flex-wrap: wrap; /* Para permitir múltiples líneas si es necesario */
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Para el subrayado en hover */
+}
+
+nav a {
+    text-decoration: none;
+    color: black; /* Texto en negro */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+nav a:hover {
+    color: #45b39d; /* Cambia a color del fondo al hacer hover */
+    transform: scale(1.1); /* Escalado al hacer hover */
+}
+
+nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #45b39d; /* Color de subrayado */
+    transition: width 0.3s;
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Ajusta la posición */
+    transform: translateX(-50%);
+}
+
+nav ul li:hover::after {
+    width: 100%; /* Se expande al hacer hover */
+}
+
+main {
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Para permitir ajuste en dispositivos pequeños */
+    margin-bottom: 20px;
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+.profile-pic {
+    width: 150px; /* Ajusta el tamaño según necesites */
+    height: 150px; /* Ajusta la altura para hacerla cuadrada */
+    border-radius: 10px; /* Bordes redondeados (puedes ajustar el valor) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.capsule {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.5s ease-in-out forwards; /* Animación de las cápsulas */
+    opacity: 0; /* Inicialmente oculto */
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.projects, .skills, .contact {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espaciado entre secciones */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación para secciones */
+    opacity: 0; /* Inicialmente oculto */
+}
+
+.projects {
+    animation-delay: 0.3s; /* Retraso para animación de Proyectos */
+}
+
+.skills {
+    animation-delay: 0.6s; /* Retraso para animación de Habilidades */
+}
+
+.contact {
+    animation-delay: 0.9s; /* Retraso para animación de Contacto */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente para el footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Diseño Responsivo */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+
+    .profile-container {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 120px; /* Reducir tamaño de la imagen */
+        height: 120px;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Reducir el margen entre los elementos del menú */
+    }
+
+    main {
+        padding: 15px; /* Reducir el padding para dispositivos pequeños */
+    }
+
+    .projects, .skills, .contact {
+        padding: 15px; /* Reducir el padding en las secciones */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Reducir el tamaño del título aún más */
+    }
+
+    nav ul {
+        flex-direction: column; /* Poner el menú en una columna */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Aumentar el margen vertical */
+    }
+
+    .projects, .skills, .contact {
+        padding: 10px; /* Reducir el padding para pantallas extra pequeñas */
+    }
+}
