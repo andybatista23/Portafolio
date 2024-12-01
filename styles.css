@@ -185,12 +185,14 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+
 /* Contenedor de la sección 'Sobre Mí' */
 .sobre-mi-contenedor {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
+    justify-content: center;
 }
 
 /* Estilo para la foto de perfil */
@@ -210,7 +212,50 @@ footer {
     line-height: 1.6;
 }
 
+/* Responsividad */
+@media (max-width: 1200px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sobre-mi-contenedor p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 992px) {
+    #inicio h1 {
+        font-size: 2rem;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.6rem;
+    }
+}
+
 @media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
     .sobre-mi-contenedor {
         flex-direction: column;
         text-align: center;
@@ -218,5 +263,38 @@ footer {
 
     .foto-perfil {
         margin-bottom: 1rem;
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #inicio {
+        padding: 4rem 1rem;
+    }
+
+    #inicio h1 {
+        font-size: 1.8rem;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
