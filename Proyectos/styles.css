@@ -22,13 +22,14 @@ header {
 }
 
 footer {
+    position: fixed;
     background-color: var(--azul-oscuro); /* Azul oscuro para el footer */
     color: var(--blanco); /* Blanco para el texto del footer */
     text-align: center;
     padding: 10px;
 }
 
-section#proyectos {
+section #proyectos {
     padding: 20px;
 }
 
