@@ -23,11 +23,16 @@ header {
 
 footer {
     position: fixed;
-    background-color: var(--azul-oscuro); /* Azul oscuro para el footer */
-    color: var(--blanco); /* Blanco para el texto del footer */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
     text-align: center;
     padding: 10px;
+    z-index: 10;
 }
+
 
 section #proyectos {
     padding: 20px;
@@ -73,7 +78,12 @@ td img {
         padding: 10px; /* Reducir el espacio dentro de las celdas */
     }
 
-    section#proyectos {
+    /* footer {
+        position: fixed;
+        padding-top: 200px;
+    } */
+
+    section #proyectos {
         padding: 15px; /* Reducir el relleno en la sección de proyectos */
     }
 }
@@ -136,10 +146,10 @@ td img {
     }
 
     td {
-        margin-bottom: 10px; /* Espacio entre las filas */
+        margin-bottom: 10px; 
     }
 
     td a {
-        font-size: 12px; /* Reducir el tamaño de los enlaces */
+        font-size: 12px;
     }
 }
