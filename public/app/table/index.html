@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio de Proyectos</title>
+  <link rel="stylesheet" href="../table/styles.css" />
+  <link rel="shortcut icon" href="/public/app/img/icono.ico"image/x-icon">
+  <style>
+    /* Estilos temporales hasta que cargue el CSS externo */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#Proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Mis Proyectos de Desarrollo</h1>
+
+    <table id="tablaProyectos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Tecnologías</th>
+          <th>Repositorio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Portafolio Personal</td>
+          <td>Sitio web donde muestro mis proyectos y habilidades.</td>
+          <td>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </td>
+          <td><a href="https://github.com/andybatista23/Portafolio" target="_blank">Ver repositorio</a></td>
+        </tr>
+        <tr>
+          <td>sistema_facturaci-n-</td>
+          <td>Proyecto colaborativo donde se basa en una sistema de factuira echo en React (aun le falta algunos modulos para poder terminarlo) .</td>
+          <td>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Firebase</span>
+          </td>
+          <td><a href="https://github.com/jeremyda173/sistema_facturaci-n-" target="_blank">Ver repositorio</a></td>
+        </tr>
+        <tr>
+          <td>FacturaSoft</td>
+          <td>Aplicación web para Pequeños empresarios que necesiten un sistema de facturación.</td>
+          <td>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Firebase</span>
+          </td>
+          <td><a href="https://github.com/andybatista23/FacturaSoft" target="_blank">Ver repositorio</a></td>
+        </tr>
+        <tr>
+          <td>FinanzasNet</td>
+          <td>Es una aplicación de escritorio desarrollada en C# con Windows Forms, diseñada para facilitar la gestión 
+            financiera de pequeñas empresas o usuarios individuales. Permite registrar y controlar 
+            ingresos, egresos, cuentas contables, y generar reportes detallados a través de una interfaz intuitiva y eficiente.</td>
+          <td>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Crystal Report</span>
+            <span class="tech-tag">Sql Server</span>
+          </td>
+          <td><a href="https://github.com/andybatista23/FinanzasNet" target="_blank">Ver repositorio</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Andy Batista. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../table/script.js"></script>
+</body>
+</html>
