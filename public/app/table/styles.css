@@ -169,3 +169,14 @@ footer p {
     min-width: 150px;
   }
 }
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* o el alto que desees */
+}
+
+.titulo h1 {
+  margin: 0;
+}
